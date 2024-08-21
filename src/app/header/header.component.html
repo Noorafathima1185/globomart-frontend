@@ -1,0 +1,44 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-danger" style="height: 10%;">
+    <!-- container-fluid -->
+    <div class="container-fluid">
+        <!-- icon & name -->
+      <a class="navbar-brand text-light ms-5 d-flex align-items-center me-5"><i class="fa-brands fa-slack text-light fs-1 me-2"></i>Globomart</a>
+      <div style="margin-left: 50px;">
+        <form class="d-flex ms-5" role="search" style="width: 500px;">
+          <!-- search area -->
+          <input class="form-control me-2" type="search" placeholder="Search by Category" aria-label="Search">
+          <!-- search button  -->
+          <button class="btn btn-outline-light" type="submit"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i></button>
+        </form>
+      </div>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <!-- button section -->
+        <div class="navbar-nav" style="margin-left: 290px;">
+            <!-- Wishlist -->
+              <a routerLink="/wishlist">
+                <button class="btn btn-outline-light me-3" type="submit">
+                    <i class="fa-solid fa-heart"></i>
+                    Wishlist<span class="badge text-bg-secondary ms-2">0</span></button>
+              </a>
+            <!-- Cart -->
+            <a routerLink="/cart">
+              <button class="btn btn-outline-light me-3" type="submit">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  Cart<span class="badge text-bg-secondary ms-2">0</span></button>
+            </a>
+            <!-- Login -->
+            <a routerLink="/login">
+              <button class="btn btn-outline-light" type="submit">
+                  <i class="fa-solid fa-user"></i>
+                  Login</button>
+            </a>
+        </div>
+      </div>
+    </div>
+  </nav>

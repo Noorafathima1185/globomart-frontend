@@ -1,0 +1,54 @@
+<app-header></app-header>
+
+<div class="container-fluid" style="margin-top: 10px;">
+    <h1 class="text-center text-danger">Cart</h1>
+
+    <!-- item in cart -->
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+            <table class="table table-bordered mt-5 shadow">
+                <thead>
+                    <tr>
+                        <th class="bg-secondary p-3 text-light text-center">Sl:No</th>
+                        <th class="bg-secondary p-3 text-light text-center">Title</th>
+                        <th class="bg-secondary p-3 text-light text-center">Image</th>
+                        <th class="bg-secondary p-3 text-light text-center">Price</th>
+                        <th class="bg-secondary p-3 text-light text-center">No of Items</th>
+                        <th class="bg-secondary p-3 text-light text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>1</td>
+                    <td>Laptop</td>
+                    <td>
+                        <img src="https://cdn.mos.cms.futurecdn.net/gnG2Z6pK7CTBJmw4pRUy8i.jpg" width="50%" alt="no image">
+                    </td>
+                    <td>$ 700</td>
+                    <td class="d-flex w-25">
+                        <button class="btn">-</button>
+                        <input type="text" class="form-control">
+                        <button class="btn">+</button>
+                    </td>
+                    <td class="text-center">
+                        <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-1"></div>
+    </div>
+
+
+    <!-- no item in cart -->
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
+            <img src="https://th.bing.com/th/id/OIP.RRRSihUwo-z6E5EhLAxztQHaHa?rs=1&pid=ImgDetMain" alt="no image" width="100px">
+
+           <a routerLink="/"><button class="btn btn-success mt-4"><i class="fa-solid fa-backward"></i></button></a>
+        </div>
+        <div class="col-md-3"></div>
+     </div>
+</div>
