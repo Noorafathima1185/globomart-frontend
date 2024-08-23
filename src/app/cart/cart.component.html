@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <div class="container-fluid" style="margin-top: 10px;">
-    <h1 class="text-center text-danger">Cart</h1>
+    <h1 class="text-center text-danger mt-5">CART</h1>
 
     <!-- item in cart -->
     <div class="row">
@@ -19,24 +19,41 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <td>1</td>
-                    <td>Laptop</td>
-                    <td>
-                        <img src="https://cdn.mos.cms.futurecdn.net/gnG2Z6pK7CTBJmw4pRUy8i.jpg" width="50%" alt="no image">
-                    </td>
-                    <td>$ 700</td>
-                    <td class="d-flex w-25">
-                        <button class="btn">-</button>
-                        <input type="text" class="form-control">
-                        <button class="btn">+</button>
-                    </td>
-                    <td class="text-center">
-                        <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
-                    </td>
+                    <tr>
+                        <td>1</td>
+                        <td>Laptop</td>
+                        <td>
+                            <img src="https://1.bp.blogspot.com/-g8t_AkN9ckU/UsSqJY_5kSI/AAAAAAAADGY/NVbgyAXnQI0/s1600/Lenovo_Yoga_13_flipping.jpg" width="250px" alt="no image">
+                        </td>
+                        <td>$ 700</td>
+                        <td class="d-flex justify-content-center">
+                            <button class="btn"><i class="fa-solid fa-minus"></i></button>
+                            <input type="text" class="form-control  w-45">
+                            <button class="btn"><i class="fa-solid fa-plus"></i></button>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
+
+            <div class="d-flex justify-content-center mt-5">
+                <button class="btn btn-outline-success me-3"><i class="fa-solid fa-backward me-2"></i>Add more item</button>
+                <button class="btn btn-outline-danger"><i class="fa-solid fa-cart-shopping fa-rotate-by me-2" style="--fa-rotate-angle: 45deg;"></i>Empty Item</button>
+            </div>
+
         </div>
-        <div class="col-md-4"></div>
+
+        <div class="col-md-4 px-md-5">
+            <div class="shadow p-4 mt-5">
+                <h3 class="text-center mb-3 text-primary">Cart Summary</h3>
+                <h4>Total number of products : 7</h4>
+                <h4>GrandTotal : $700</h4>
+                <a routerLink="/checkout"><button class="btn btn-success w-100 mt-3">checkout</button></a>
+            </div>
+        </div>
+
         <div class="col-md-1"></div>
     </div>
 
@@ -45,9 +62,9 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
-            <img src="https://th.bing.com/th/id/OIP.RRRSihUwo-z6E5EhLAxztQHaHa?rs=1&pid=ImgDetMain" alt="no image" width="100px">
+            <img src="https://aquamarineexotic.com/adminpanel/assets/images/empty-wishlist.png" alt="no image" width="100%">
 
-           <a routerLink="/"><button class="btn btn-success mt-4"><i class="fa-solid fa-backward"></i></button></a>
+            <a routerLink="/"><button class="btn btn-success mt-4 shadow"><i class="fa-solid fa-backward me-2"></i>Add item to wishlist</button></a>
         </div>
         <div class="col-md-3"></div>
      </div>

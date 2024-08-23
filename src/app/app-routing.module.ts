@@ -15,7 +15,7 @@ const routes: Routes = [
   {path:'checkout',component:CheckoutComponent},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
-  {path:'view-product',component:ViewProductComponent},
+  {path:'view-product/:id',component:ViewProductComponent},
   {path:'wishlist',component:WishlistComponent},
   {path:'**',component:PagenotfoundComponent}
 ];
