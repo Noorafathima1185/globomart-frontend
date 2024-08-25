@@ -36,64 +36,16 @@
 <div class="container-fluid mt-5">
   <div class="row">
 
-    <div class="col-md-3">
+    <div class="col-md-3 p-4" *ngFor="let product of allProducts">
       <div class="card shadow border-0" style="width: 100%;">
-        <a routerLink="view-product/1">
+        <a routerLink="view-product/{{product.id}}">
           <img
-            src="https://1.bp.blogspot.com/-g8t_AkN9ckU/UsSqJY_5kSI/AAAAAAAADGY/NVbgyAXnQI0/s1600/Lenovo_Yoga_13_flipping.jpg"
-            class="card-img-top" alt="no image">
+            [src]="product.image"
+            class="card-img-top" alt="no image" height="250px">
         </a>
         <div class="card-body">
-          <h5 class="card-title text-center">Laptop</h5>
-          <p class="card-text text-center fw-bold">Price: $700</p>
-          <div class="d-flex justify-content-between">
-            <a href="#" class="btn btn-outline-danger"><i class="fa-solid fa-heart"></i></a>
-            <a href="#" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="card shadow border-0" style="width: 100%;">
-        <img
-          src="https://1.bp.blogspot.com/-g8t_AkN9ckU/UsSqJY_5kSI/AAAAAAAADGY/NVbgyAXnQI0/s1600/Lenovo_Yoga_13_flipping.jpg"
-          class="card-img-top" alt="no image">
-        <div class="card-body">
-          <h5 class="card-title text-center">Laptop</h5>
-          <p class="card-text text-center fw-bold">Price: $700</p>
-          <div class="d-flex justify-content-between">
-            <a href="#" class="btn btn-outline-danger"><i class="fa-solid fa-heart"></i></a>
-            <a href="#" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="card shadow border-0" style="width: 100%;">
-        <img
-          src="https://1.bp.blogspot.com/-g8t_AkN9ckU/UsSqJY_5kSI/AAAAAAAADGY/NVbgyAXnQI0/s1600/Lenovo_Yoga_13_flipping.jpg"
-          class="card-img-top" alt="no image">
-        <div class="card-body">
-          <h5 class="card-title text-center">Laptop</h5>
-          <p class="card-text text-center fw-bold">Price: $700</p>
-          <div class="d-flex justify-content-between">
-            <a href="#" class="btn btn-outline-danger"><i class="fa-solid fa-heart"></i></a>
-            <a href="#" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="card shadow border-0" style="width: 100%;">
-        <img
-          src="https://1.bp.blogspot.com/-g8t_AkN9ckU/UsSqJY_5kSI/AAAAAAAADGY/NVbgyAXnQI0/s1600/Lenovo_Yoga_13_flipping.jpg"
-          class="card-img-top" alt="no image">
-        <div class="card-body">
-          <h5 class="card-title text-center">Laptop</h5>
-          <p class="card-text text-center fw-bold">Price: $700</p>
+          <h5 class="card-title">{{product.title.slice(0,25)}}...</h5>
+          <p class="card-text text-center fw-bold">Price: $ {{product.price}}</p>
           <div class="d-flex justify-content-between">
             <a href="#" class="btn btn-outline-danger"><i class="fa-solid fa-heart"></i></a>
             <a href="#" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></a>
