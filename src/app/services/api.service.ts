@@ -20,4 +20,14 @@ export class ApiService {
   getAproductApi(id:any){
     return this.http.get(`${this.serverUrl}/product/${id}`)
   }
+
+  // api to register
+  registerApi(reqBody:any){
+    return this.http.post(`${this.serverUrl}/register`,reqBody)
+  }
+
+  // api to login
+  loginApi(reqBody:any){
+    return this.http.post(`${this.serverUrl}/login`,reqBody)
+  }
 }

@@ -2,15 +2,17 @@
     <div class="col-md-1"></div>
     
     <div class="col-md-5 me-1 d-flex align-items-center justify-content-center">
-        <form class="shadow p-5 w-100 " >
+        <form class="shadow p-5 w-100 " [formGroup]="loginForm" (ngSubmit)="login()">
             <h3 class="text-center text-danger mb-3">Welcome user</h3>
             
             <div class="mb-3">
-                <input  type="text" class="form-control" placeholder="Enter Email" >
+                <input  type="text" class="form-control" placeholder="Enter Email" formControlName="email" name="email">
+                <span class="text-warning" *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched" >*Invalid Email</span>
               
             </div>
             <div class="mb-3">
-                <input  type="text" class="form-control" placeholder="Enter password">
+                <input  type="text" class="form-control" placeholder="Enter password" formControlName="password" name="pswd">
+                <span class="text-warning" *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched" >*Invalid Password</span>
                 
              </div>
             <div class="mb-3">

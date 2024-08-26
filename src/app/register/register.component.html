@@ -2,22 +2,25 @@
     <div class="col-md-1"></div>
     
     <div class="col-md-5 me-1 d-flex align-items-center justify-content-center">
-        <form class="shadow p-5 w-100 " >
+        <form class="shadow p-5 w-100" [formGroup]="registerForm" (ngSubmit)="register()">
             <h3 class="text-center text-danger mb-3">Join Family</h3>
             <div class="mb-3">
-               <input  type="text" class="form-control" placeholder="enter username">
+               <input  type="text" class="form-control" placeholder="enter username" formControlName="username" name="username">
+               <span *ngIf="registerForm.get('username')?.errors && registerForm.get('username')?.touched" class="text-warning">*Invalid Username</span>
                
             </div>
             <div class="mb-3">
-                <input  type="text" class="form-control" placeholder="Enter Email" >
+                <input  type="text" class="form-control" placeholder="Enter Email" formControlName="email" name="email">
+                <span *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched" class="text-warning">*Invalid Email</span>
               
             </div>
             <div class="mb-3">
-                <input  type="text" class="form-control" placeholder="Enter password">
+                <input  type="text" class="form-control" placeholder="Enter password" formControlName="password" name="pswd">
+                <span *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched" class="text-warning">*Invalid Password</span>
                 
              </div>
             <div class="mb-3">
-                <button  class="btn btn-danger w-100">Register</button>
+                <button type="submit" class="btn btn-danger w-100">Register</button>
             </div>
         </form>
     </div>
